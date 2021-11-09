@@ -1,0 +1,8 @@
+
+
+
+python -W ignore Cifar_10_Multi_Server_Multi_GPU_Train.py --job_name=ps --task_index=0 --num_gpus=1 --ps_hosts="172.31.91.243:2223" --worker_hosts="172.31.91.243:2222, 172.31.85.131:2222"
+
+python -W ignore Cifar_10_Multi_Server_Multi_GPU_Train.py --job_name=worker --task_index=0 --num_gpus=1 --ps_hosts="172.31.91.243:2223" --worker_hosts="172.31.91.243:2222, 172.31.85.131:2222"
+
+python -W ignore Cifar_10_Multi_Server_Multi_GPU_Train.py --job_name=worker --task_index=1 --num_gpus=1 --ps_hosts="172.31.91.243:2223" --worker_hosts="172.31.91.243:2222, 172.31.85.131:2222"
